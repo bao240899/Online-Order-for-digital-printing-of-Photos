@@ -16,8 +16,9 @@ namespace Online_Order_for_digital_printing_of_Photos
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { " Online-Order-for-digital-printing-of-Photos.Areas.User.Controller " }
+            ).DataTokens.Add("Area", "User");
         }
     }
 }
