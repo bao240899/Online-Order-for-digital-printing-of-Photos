@@ -4,26 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Online_Order_for_digital_printing_of_Photos.Controllers
+namespace Online_Order_for_digital_printing_of_Photos.Areas.User.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: User/Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
