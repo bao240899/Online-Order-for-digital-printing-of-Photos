@@ -2,24 +2,27 @@
 
 <html lang="en">
 <head>
-    <title>@ViewBag.Title</title>
-    @RenderSection("styles", required: false)
-    <link href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <!-- jQuery (necessary JavaScript plugins) -->
-    <!-- Custom Theme files -->
-    <link href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/style.css" rel='stylesheet' type='text/css' />
-    <!-- Custom Theme files -->
-    <!--//theme-style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <!--script-->
-    <script type='text/javascript' src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/jquery-1.11.1.min.js"></script>
+    <title>Picstock HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/icons.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/color.css" />
+
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/extralayers.css" media="screen" />
+    @*<link rel="stylesheet" type="text/css" href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/settings.css" media="screen" />*@
+
 </head>
 <body>
     <!--header_top-->
-    @Html.Partial("~/Views/Shared/UserLayout/_Header_Top.cshtml")
+    @*@Html.Partial("~/Views/Shared/UserLayout/_Header_Top.cshtml")*@
 
     <!--header-->
     @Html.Partial("~/Views/Shared/UserLayout/_Header.cshtml")
@@ -29,35 +32,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
     <!--footer_top-->
-    @Html.Partial("~/Views/Shared/UserLayout/_Footer_top.cshtml")
+    @*@Html.Partial("~/Views/Shared/UserLayout/_Footer_top.cshtml")*@
     <!--footer-->
     @Html.Partial("~/Views/Shared/UserLayout/_Footer.cshtml")
 
 
-    <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/jquery.min.js" type="text/javascript"></script>
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
-    <!-- start menu -->
-    <link href="~/Content/OnlineOrderForDigitalrintingOfPhotos/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/revolution/jquery.themepunch.revolution.min.js"></script>
 
-    <script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/enscroll-0.5.2.min.js" type="text/javascript"></script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/jquery.scrolly.js" type="text/javascript"></script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/jquery.isotope.min.js"></script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/isotope-initialize.js"></script>
+    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/script.js" type="text/javascript"></script>
+    <script type="text/javascript">
         $(document).ready(function () {
-            $(".megamenu").megamenu();
+            jQuery('.tp-banner').show().revolution({
+                delay: 15000,
+                startwidth: 1170,
+                startheight: 540,
+                autoHeight: "off",
+                navigationType: "none",
+                hideThumbs: 10,
+                fullWidth: "on",
+                fullScreen: "on",
+                fullScreenOffsetContainer: ""
+            });
+
         });
     </script>
-    <script type="text/javascript" src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/megamenu.js"></script>
-    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/menu_jquery.js"></script>
-    <script src="~/Content/OnlineOrderForDigitalrintingOfPhotos/js/simpleCart.min.js"></script>
-
-
     @RenderSection("scripts", required: false)
 </body>
 </html>
