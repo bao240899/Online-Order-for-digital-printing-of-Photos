@@ -121,6 +121,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Cart\CartAreaRegistration.cs" />
+    <Compile Include="Areas\Cart\Controllers\CartController.cs" />
+    <Compile Include="Areas\Image\Controllers\DetailController.cs" />
+    <Compile Include="Areas\Image\Controllers\ImageController.cs" />
+    <Compile Include="Areas\Image\ImageAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,6 +149,7 @@
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\responsive.css" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\settings.css" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\style.css" />
+    <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\images\a.jpg" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\images\form-box.jpg" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\images\four-column.png" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\images\language1.png" />
@@ -196,6 +202,12 @@
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\fonts\themify.eot" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\fonts\themify.ttf" />
     <Content Include="Content\OnlineOrderForDigitalrintingOfPhotos\css\fonts\themify.woff" />
+    <Content Include="Areas\Image\Views\web.config" />
+    <Content Include="Areas\Image\Views\Image\ImgList.cshtml" />
+    <Content Include="Areas\Image\Views\Detail\DetailImg.cshtml" />
+    <Content Include="Areas\Cart\Views\web.config" />
+    <Content Include="Areas\Cart\Views\Cart\Cart.cshtml" />
+    <Content Include="Areas\Cart\Views\Cart\Checkout.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -230,6 +242,10 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Cart\Data\" />
+    <Folder Include="Areas\Cart\Views\Shared\" />
+    <Folder Include="Areas\Image\Data\" />
+    <Folder Include="Areas\Image\Views\Shared\" />
     <Folder Include="Areas\User\Data\" />
     <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
