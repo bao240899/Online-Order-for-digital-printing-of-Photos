@@ -2028,6 +2028,8 @@
     <Content Include="Content\assets\vendor\style-switcher\less\skin.less" />
     <Content Include="Content\assets\vendor\style-switcher\less\variables.less" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\User\Views\Home\Login.cshtml" />
+    <Content Include="Areas\User\Views\Home\SignUp.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

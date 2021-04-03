@@ -14,6 +14,16 @@ namespace Online_Order_for_digital_printing_of_Photos.Areas.User.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             return View();
