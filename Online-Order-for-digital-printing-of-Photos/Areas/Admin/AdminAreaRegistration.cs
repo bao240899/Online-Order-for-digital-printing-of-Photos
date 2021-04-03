@@ -16,8 +16,8 @@ namespace Online_Order_for_digital_printing_of_Photos.Areas.Admin
         {
             context.MapRoute(
                 "Admin_default",
-                "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "Admin/{Area}/{controller}/{action}/{id}",
+                new { Area="Admin", Controller="Dashboard",  action = "Index", id = UrlParameter.Optional }
             );
         }
     }

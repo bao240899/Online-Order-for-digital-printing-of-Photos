@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Cart\CartAreaRegistration.cs" />
     <Compile Include="Areas\Cart\Controllers\CartController.cs" />
     <Compile Include="Areas\Image\Controllers\DetailController.cs" />
@@ -190,6 +191,7 @@
     <Content Include="Content\assets\images\projects\project-6.jpg" />
     <Content Include="Content\assets\images\projects\project-7.jpg" />
     <Content Include="Content\assets\images\projects\project.jpg" />
+    <Content Include="Content\assets\images\sample-user.jpg" />
     <Content Include="Content\assets\images\widget-twitter-profile.jpg" />
     <Content Include="Content\assets\javascripts\dashboard\examples.dashboard.js" />
     <Content Include="Content\assets\javascripts\forms\examples.advanced.form.js" />
@@ -2025,6 +2027,7 @@
     <Content Include="Content\assets\vendor\style-switcher\less\shared.less" />
     <Content Include="Content\assets\vendor\style-switcher\less\skin.less" />
     <Content Include="Content\assets\vendor\style-switcher\less\variables.less" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -2135,10 +2138,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\AdminLayout\_Layout.cshtml" />
+    <Content Include="Views\Shared\AdminLayout\_Header.cshtml" />
+    <Content Include="Views\Shared\AdminLayout\_Sidebar.cshtml" />
+    <Content Include="Views\Shared\AdminLayout\_PageHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Cart\Data\" />
