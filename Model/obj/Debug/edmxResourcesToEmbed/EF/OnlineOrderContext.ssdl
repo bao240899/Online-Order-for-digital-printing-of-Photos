@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnlineOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="cateID" />
+    </Key>
+    <Property Name="cateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cateDesc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="feedbackID" />
+    </Key>
+    <Property Name="feedbackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photoID" Type="int" />
+    <Property Name="userID" Type="int" />
+    <Property Name="guestName" Type="nvarchar" MaxLength="50" />
+    <Property Name="subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="rating" Type="int" />
+    <Property Name="comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="feedbackDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="Fomat">
+    <Key>
+      <PropertyRef Name="fomatID" />
+    </Key>
+    <Property Name="fomatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fomatName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="orderDetailID" />
+    </Key>
+    <Property Name="orderDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photoID" Type="int" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" />
+    <Property Name="orderCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="orderDay" Type="datetime" />
+    <Property Name="totalPrice" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="paymentMethod" Type="int" />
+    <Property Name="deliveryAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="orderStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="paymentID" />
+    </Key>
+    <Property Name="paymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="transaction_info" Type="nvarchar" MaxLength="50" />
+    <Property Name="paymentType" Type="int" />
+    <Property Name="error_text" Type="nvarchar" MaxLength="50" />
+    <Property Name="orderCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="order_desc" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="discount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="fee_shipping" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="Price">
+    <Key>
+      <PropertyRef Name="priceID" />
+    </Key>
+    <Property Name="priceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photoID" Type="int" />
+    <Property Name="fomatID" Type="int" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Photos">
+    <Key>
+      <PropertyRef Name="photoID" />
+    </Key>
+    <Property Name="photoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photoName" Type="nvarchar" MaxLength="50" />
+    <Property Name="photoImg" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" />
+    <Property Name="priceID" Type="int" />
+    <Property Name="status" Type="int" />
+    <Property Name="cateID" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="50" />
+    <Property Name="userPwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="OnlineOrderModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fomat" EntityType="Self.Fomat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Price" EntityType="Self.Price" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

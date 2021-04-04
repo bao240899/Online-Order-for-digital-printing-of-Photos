@@ -220,3 +220,6 @@ D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-di
 D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\EntityFramework.SqlServer.dll
 D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\EntityFramework.xml
 D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\EntityFramework.SqlServer.xml
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\Model.dll
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\Model.pdb
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Online-Order-for-digital-printing-of-Photos\bin\Model.dll.config

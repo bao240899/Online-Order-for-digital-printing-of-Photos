@@ -1,4 +1,5 @@
-﻿<header>
+﻿@using Online_Order_for_digital_printing_of_Photos.Common
+<header>
     <div class="container">
         <div class="header-container">
             <nav>
@@ -9,13 +10,54 @@
                     </li>
                 </ul>
             </nav><!-- Navigation -->
-            <div class="header-links">
-                <ul>
-                    <li><a href="~/Home/Login" title="">Log in</a></li>
-                    <li><a href="~/Home/SignUp" title="">Sign up</a></li>
-                    <li><a href="~/Cart" title="">Cart (0)</a></li>
-                </ul>
-            </div><!-- Header Links -->
+            @{
+                var session = (UserLogin)Session[Online_Order_for_digital_printing_of_Photos.Common.CommonConstant.USER_SESSION];
+
+            }
+            @if (session == null)
+            {
+                <div class="header-links">
+                    <ul list-unstyled>
+                        <li><a href="~/Home/Login" title="">Log in</a></li>
+                        <li><a href="~/Home/SignUp" title="">Sign up</a></li>
+                        <li><a href="~/Cart" title="">Cart (0)</a></li>
+                    </ul>
+                </div><!-- Header Links -->
+
+            }
+            else
+            {
+                <div class="header-links">
+                    <ul style="list-unstyled">
+                        <li><a href="~/Cart" title="">Cart (0)</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a role="menuitem" href="#"><i class="fa fa-user"></i> My Profile</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="~/Home/Logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                        
+                    </ul>
+                </div><!-- Header Links -->
+
+
+                <div class="dropdown-menu">
+                    <ul class="">
+                        <li class="divider"></li>
+                        <li>
+                            <a role="menuitem" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+                        </li>
+                        @*<li>
+                                <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
+                            </li>*@
+                        <li>
+                            <a role="menuitem" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                        <li><a href="~/Cart" title="">Cart (0)</a></li>
+                    </ul>
+                </div>
+            }
         </div>
     </div>
 </header><!-- Header -->

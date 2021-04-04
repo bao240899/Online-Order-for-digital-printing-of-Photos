@@ -1,18 +1,56 @@
-﻿
+﻿@model Online_Order_for_digital_printing_of_Photos.Models.LoginModel
+
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/UserLayout/_Layout.cshtml";
 }
 
 <div class="form-box">
-    <div class="title" style="text-align: center; margin-bottom: 2.2em">
+    <div class="title" style="text-align: center; margin-bottom: 1.5em">
         <h2>LOGIN</h2>
     </div>
-    <form class="registration-form" style="padding: 0 40% 0 40%;">
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "registration-form", @style = "padding: 0 40% 0 40%;" }))
+    {
+        @Html.AntiForgeryToken()
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="row">
-            <div class="col-md-12"><div class="field"><i class="far fa-user-circle"></i><input type="text" placeholder="UserName" /></div></div>
-            <div class="col-md-12"><div class="field"><i class="ti-key"></i><input type="password" placeholder="Password" /></div></div>
-            <div class="col-md-12"><div class="field field-button"><input type="submit" value="Login" /></div></div>
+            <div class="col-md-12 form-group">
+                @*@Html.LabelFor(model => model.userName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+
+                <div class="field">
+                    <i class="far fa-user-circle"></i>
+                    @Html.TextBoxFor(model => model.userName, new { @class = "form-control", @type = "text", @placeholder = "UserName", @autofocus = "autofocus" })
+                    @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                @*@Html.LabelFor(model => model.userPwd, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <div class="field">
+                    <i class="ti-key"></i>
+                    @Html.PasswordFor(model => model.userPwd, new { @class = "form-control", @type = "password", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(model => model.userPwd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                @*<div class="field field-button">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>*@
+                <div class="field field-button">
+                    <input type="submit" value="Login" />
+                </div>
+            </div>
         </div>
-    </form>
-</div><!-- Login Form -->
+    }
+</div>
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

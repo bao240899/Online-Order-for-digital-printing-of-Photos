@@ -1,0 +1,12 @@
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\Model.dll.config
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\Model.dll
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\Model.pdb
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\EntityFramework.dll
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\EntityFramework.xml
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\obj\Debug\Model.dll
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\obj\Debug\Model.pdb
+D:\Sem3\ePrjSEM3\Online-Order-for-digital-printing-of-Photos\Model\obj\Debug\Model.csprojAssemblyReference.cache
