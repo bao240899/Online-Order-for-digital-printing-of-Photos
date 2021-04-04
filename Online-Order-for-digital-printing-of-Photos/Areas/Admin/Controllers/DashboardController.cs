@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Online_Order_for_digital_printing_of_Photos.Areas.Admin.Controllers
 {
-    public class DashboardController : Controller
+    public class DashboardController : BaseAdminController
     {
         // GET: Admin/Dashboard
         public ActionResult Index()
