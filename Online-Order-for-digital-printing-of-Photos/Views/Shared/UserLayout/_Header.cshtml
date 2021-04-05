@@ -30,33 +30,17 @@
                 <div class="header-links">
                     <ul style="list-unstyled">
                         <li><a href="~/Cart" title="">Cart (0)</a></li>
-                        <li class="divider"></li>
                         <li>
-                            <a role="menuitem" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            @*@Html.ActionLink("My Profile", "Profile", "User", new { id = session.userID }, "")*@
+                            <a href="~/User/Profile/@session.userID">My Profile</a>
                         </li>
                         <li>
                             <a role="menuitem" href="~/Home/Logout"><i class="fa fa-power-off"></i> Logout</a>
                         </li>
-                        
                     </ul>
                 </div><!-- Header Links -->
 
 
-                <div class="dropdown-menu">
-                    <ul class="">
-                        <li class="divider"></li>
-                        <li>
-                            <a role="menuitem" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
-                        </li>
-                        @*<li>
-                                <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
-                            </li>*@
-                        <li>
-                            <a role="menuitem" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
-                        </li>
-                        <li><a href="~/Cart" title="">Cart (0)</a></li>
-                    </ul>
-                </div>
             }
         </div>
     </div>

@@ -16,15 +16,16 @@ namespace Model.Dao
             db = new OnlineOrderEntities();
         }
 
-        public Users GetById(string username)
+        public Users GetByUser(string username)
         {
             return db.Users.SingleOrDefault(x => x.userName == username);
         }
 
-        //public Users GetByIdd(int userid)
-        //{
-        //    return db.Users.SingleOrDefault(x => x.userID == userid);
-        //}
+        public Users GetById(int userid)
+        {
+
+            return db.Users.SingleOrDefault(x => x.userID == userid);
+        }
 
         public int Login(string username, string password)
         {
@@ -49,8 +50,6 @@ namespace Model.Dao
                     {
                         return -2;
                     }
-
-
                 }
             }
         }

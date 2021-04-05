@@ -32,7 +32,7 @@ namespace Online_Order_for_digital_printing_of_Photos.Areas.User.Controllers
                 var res = dao.Login(model.userName, model.userPwd);
                 if (res == 1)
                 {
-                    var user = dao.GetById(model.userName);
+                    var user = dao.GetByUser(model.userName);
                     //var stt = dao.GetByIdd(user.userID);
                     if (user.role == "user")
                     {
