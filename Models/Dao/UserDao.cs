@@ -1,4 +1,4 @@
-﻿using Online_Order_for_digital_printing_of_Photos.Online_Order_for_digital_printing_of_Photos_Model.EF;
+﻿using Online_Order_for_digital_printing_of_Photos.Models.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,6 @@ namespace Online_Order_for_digital_printing_of_Photos.Models.Dao
 
         public Users GetById(int userid)
         {
-
             return db.Users.SingleOrDefault(x => x.userID == userid);
         }
 

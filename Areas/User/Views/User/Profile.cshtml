@@ -1,8 +1,10 @@
-﻿@model Online_Order_for_digital_printing_of_Photos.Online_Order_for_digital_printing_of_Photos_Model.EF.Users
+﻿@model Online_Order_for_digital_printing_of_Photos.Models.EF.Users
+@using Online_Order_for_digital_printing_of_Photos.Common
 
 @{
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/UserLayout/_Layout.cshtml";
+    var session = (UserLogin)Session[Online_Order_for_digital_printing_of_Photos.Common.CommonConstant.USER_SESSION];
 }
 
 <section class="body">
@@ -19,7 +21,6 @@
                 <dd>
                     @Html.DisplayFor(model => model.userName)
                 </dd>
-
 
                 <dt>
                     @Html.DisplayNameFor(model => model.email)

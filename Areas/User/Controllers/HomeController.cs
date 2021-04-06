@@ -1,11 +1,11 @@
 ﻿using Online_Order_for_digital_printing_of_Photos.Models.Dao;
 using Online_Order_for_digital_printing_of_Photos.Common;
-using Online_Order_for_digital_printing_of_Photos.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Online_Order_for_digital_printing_of_Photos.Areas.User.Models;
 
 namespace Online_Order_for_digital_printing_of_Photos.Areas.User.Controllers
 {
